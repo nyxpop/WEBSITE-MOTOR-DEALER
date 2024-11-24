@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike&Shiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">bike&shiz</a>
+
+        <nav class="navbar-home">
+            <a href="home.html" class="active">Home</a>
+            <a href="garage.html">Garage</a>
+
+        </nav>
+    </header>
+
+    <section class="purchase">
+        <div class="purchase-content">
+            <h3>Kawasaki Ninja 250</h3>
+            <h1>spek motor:</h1>
+            <h1>Kapasitas: 249 cc</h1>
+            <h1>Tenaga Maksimal: 38.46 hp</h1>
+            <h1>Opsi start: Electric</h1>
+            <h1>Kategori: Sport</h1>
+            <h1>Rem Depan: Disc</h1>
+            <div class="btn-box">
+            <button type="button" id="btn">PURCHASE</button>
+            </div>
+        </div>
+
+        <div>
+            <img src="kawasaki-removebg-preview.png" alt="">
+        </div>
+    </section>
+    
+</body>
+
+                <!--Java Script-->
+
+<script src="dist/sweetalert2.all.min.js"></script>
+<script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click',function(){
+        Swal.fire({
+  title: "Are you sure you want to purchase this?",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Purchase"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Succes!",
+      text: "Your purchase has been confirmed.",
+      icon: "success"
+    });
+  }
+});
+    });
+</script>
+</html>
